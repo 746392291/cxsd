@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://cstart.com/ui"
+    elementFormDefault="qualified">
+    <xs:complexType name="container">
+        <xs:sequence>
+            <xs:element name="QrButton">
+                <xs:complexType>
+                    <xs:attribute name="text" type="xs:string"></xs:attribute>
+                    <xs:attribute name="title" type="xs:string"></xs:attribute>
+                    <xs:attribute name="url" type="xs:string"></xs:attribute>
+                    <xs:attribute name="param" type="xs:string"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="CheckBox">
+                <xs:complexType>
+                    <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+                    <xs:attribute name="defCheck" type="xs:boolean"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="Divider">
+                <xs:complexType>
+                    <xs:attribute name="text" type="xs:string"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="HorLayout" type="container"></xs:element>
+
+            <xs:element name="Input">
+                <xs:complexType>
+                    <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+                    <xs:attribute name="placeholder" type="xs:string"></xs:attribute>
+                    <xs:attribute name="isNum" type="xs:boolean"></xs:attribute>
+                    <xs:attribute name="isTrim" type="xs:boolean"></xs:attribute>
+                    <xs:attribute name="defText" type="xs:string"></xs:attribute>
+                    <xs:attribute name="minWidth" type="xs:integer"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="Spinner">
+                <xs:complexType>
+                    <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+                    <xs:attribute name="list" type="xs:string" use="required"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="Tab"></xs:element>
+
+            <xs:element name="WebView">
+                <xs:complexType>
+                    <xs:attribute name="url" type="xs:string" use="required"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="Text">
+                <xs:complexType>
+                    <xs:attribute name="text" type="xs:string"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="isCenter" type="xs:boolean"></xs:attribute>
+    </xs:complexType>
+    <xs:element name="Setting" type="container">
+    </xs:element>
+</xs:schema>
