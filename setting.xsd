@@ -25,6 +25,7 @@
                     <xs:attribute name="text" type="xs:string"></xs:attribute>
                 </xs:complexType>
             </xs:element>
+
             <xs:element name="HorLayout" type="container"></xs:element>
 
             <xs:element name="Input">
@@ -45,7 +46,8 @@
                 </xs:complexType>
             </xs:element>
 
-            <xs:element name="Tab"></xs:element>
+            <xs:element name="Tab">
+            </xs:element>
 
             <xs:element name="WebView">
                 <xs:complexType>
@@ -60,7 +62,14 @@
             </xs:element>
         </xs:sequence>
         <xs:attribute name="isCenter" type="xs:boolean"></xs:attribute>
+        <xs:attribute name="title" type="xs:string"></xs:attribute>
     </xs:complexType>
-    <xs:element name="Setting" type="container">
-    </xs:element>
+    <xs:complexType name="root">
+        <xs:sequence>
+            <xs:element name="Fragment" type="container">
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="isCenter" type="xs:boolean"></xs:attribute>
+    </xs:complexType>
+    <xs:element name="Setting" type="root"></xs:element>
 </xs:schema>
