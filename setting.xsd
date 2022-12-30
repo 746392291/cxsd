@@ -39,10 +39,20 @@
                 </xs:complexType>
             </xs:element>
 
+            <xs:element name="TAG">
+            </xs:element>
+
             <xs:element name="Spinner">
                 <xs:complexType>
                     <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
                     <xs:attribute name="list" type="xs:string" use="required"></xs:attribute>
+                    <xs:attribute name="def" type="xs:string" use="required"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EmptyLine">
+                <xs:complexType>
+                    <xs:attribute name="height" type="xs:string" use="required"></xs:attribute>
                 </xs:complexType>
             </xs:element>
 
